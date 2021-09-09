@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>美洲杯决赛</title>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/mediaelement-and-player.min.js"></script>
+	<link rel="stylesheet" href="css/style.css" media="screen">
+
+	<style type="text/css">
+		html, body { margin-top: 30px;	padding: 0; background-image:url(media/messi.jpg)}
+		.mejs-container { margin: 0 auto; }
+	</style>
+<meta name="robots" content="noindex,follow" />
+</head>
+
+<body>
+
+	<video width="900" height="400" poster="media/football.jpg">
+		<source src="media/football.mp4" type="video/mp4">
+	</video>
+
+	<script>
+	$(document).ready(function() {
+		$('video').mediaelementplayer({
+			alwaysShowControls: false,
+			videoVolume: 'horizontal',
+			features: ['playpause','progress','volume','fullscreen']
+		});
+	});
+	</script>
+
+</body>
+
+</html>
